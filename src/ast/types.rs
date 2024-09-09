@@ -150,7 +150,7 @@ impl Node for FunctionTypeName {
 #[serde(rename_all = "camelCase")]
 pub struct ArrayTypeName {
     pub base_type: Box<TypeName>,
-    pub length: Option<Literal>,
+    pub length: Option<Box<Expression>>,
     pub type_descriptions: TypeDescriptions,
 }
 
